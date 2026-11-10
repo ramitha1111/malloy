@@ -12,7 +12,9 @@
 name: Core
 permissions: {}
 
-on: workflow_call
+on:
+  workflow_dispatch:
+  "workflow_call":
 
 jobs:
   # Lint and the CI-shape guards need only the built workspace; they run
