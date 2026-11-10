@@ -21,6 +21,7 @@ jobs:
   # alongside the tests rather than ahead of them.
   lint:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - uses: actions/download-artifact@v8
         with:
@@ -43,6 +44,7 @@ jobs:
   # Named `main` because branch protection requires the check "main / main".
   main:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
 
     services:
       postgres:
